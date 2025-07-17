@@ -1,0 +1,7 @@
+mkdir Titanic_Survival
+cd Titanic_Survival
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
