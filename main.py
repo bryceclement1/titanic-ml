@@ -6,9 +6,9 @@ from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#
+############
 # Training the model using train.csv data
-#
+############
 
 train_df = pd.read_csv("data/train.csv")
 print(train_df.head())
@@ -47,9 +47,9 @@ predictions = model.predict(X_test)
 
 print("Accuracy:", accuracy_score(y_test, predictions))
 
-#
+############
 # Investivating importance of the features
-#
+############
 
 sns.set(style="whitegrid")
 
@@ -132,13 +132,13 @@ axes[1, 1].set_xticklabels(["Male", "Female"])
 plt.tight_layout()
 plt.show()
 
-#
+############
 # Run model on test.csv data
-#
+############
 
 # Load test data 
 test_df = pd.read_csv("data/test.csv")
-true_labels = pd.read_csv("data/results.csv")  # This contains actual Survived values
+true_labels = pd.read_csv("data/test_results.csv")  # This contains actual Survived values
 
 # Save PassengerId for merging
 passenger_ids = test_df['PassengerId']
